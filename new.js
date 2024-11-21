@@ -14,3 +14,13 @@ console.log(
     Math.min(100,20,50,-3,70,-100))
     console.log(
         Math.max(12000,20,50,-3,70,-100))
+     console.log(Math.ceil(Math.sqrt(96)))   
+     let son = 20;
+     console.log(son.toString())
+     let sona = 20.9856325;
+     console.log(sona.toFixed(2))
+     let r='2'
+     console.log(+r)
+     console.log(--r)
+     let d = new Date()
+     console.log(d.toUTCString())
