@@ -17,3 +17,8 @@ h2{  text-align:center;
     font-size: 26px;
     color: rgb(255, 42, 0);
 }
+#demo button {
+  height: 20px;
+  font-weight: bold; 
+  color: red;
+}

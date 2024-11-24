@@ -7,12 +7,16 @@
     <title>
         Alloh mehribon
     </title>
+    
    
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <!-- <script source = 'new.js'></script> -->
+ 
    <h2>
-    <P>
+    <P style="background-color: blueviolet; font-family: Verdana, Geneva, Tahoma, sans-serif;">
         Alhamdulillah. Allohim doimo suygan bandalaring qatorida qilishingni
         so'rayman. <h1>Soniyalarga ham o'z holimga tashlab qo'yma.</h1>    
     </P>
@@ -48,5 +52,16 @@
         </p>
 
     </div>
+    <p id="demo">
+        <button onclick="myFunction()" >Click</button>
+    </p>
+    <script>
+        const tabiat = ['tol','tosh','olma'];
+        document.getElementById('demo').innerHTML = tabiat;
+        function myFunction(){
+            tabiat.push('lemin');
+            document.getElementById('demo').innerHTML =tabiat
+        }
+    </script>
 </body>
 </html>
