@@ -40,23 +40,23 @@
     x--
     let y=1
     let z=x
-    // console.log(!(x>y))
-    // console.log(x=1) 
-    // console.log(z) 
-    // let married = 'widowe'
-    // if(married === 'yes'){
-    //     console.log('you will accept')
+    console.log(!(x>y))
+    console.log(x=1) 
+    console.log(z) 
+    let married = 'widowe'
+    if(married === 'yes'){
+        console.log('you will accept')
         
-    // }
-    // else if(married=='widowed'){
-    //     console.log('not accepted')
+    }
+    else if(married=='widowed'){
+        console.log('not accepted')
         
-    // }
-    // else if(married ='engaged'){
-    //     console.log('you can apply after wedding')
-    // }
-    // else{console.log('Invalid answer');
-    // }
+    }
+    else if(married ='engaged'){
+        console.log('you can apply after wedding')
+    }
+    else{console.log('Invalid answer');
+    }
     
 
 
@@ -104,3 +104,6 @@ console.log(grendeur? 'Sotib olaman' : 'Boshqasini olishni oylab koraman' )
 
 let f = '123654'
 console.log(Number(f.length))
+
+let a='12345679'
+console.log(a.slice(0,-3))
