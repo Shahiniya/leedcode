@@ -82,28 +82,28 @@
 // // let par='salom1'
 // // console.log(par.padEnd(8,'55'))
 
-// let d=21/6
-// console.log(d.toFixed(5))
+let d=21/6
+console.log(d.toFixed(5))
 
-// console.log(12+ +'12k')
+console.log(12+ +'12k')
 
-// num = 23654123965874125n
-// console.log(num * 2n/5n)
+num = 23654123965874125n
+console.log(num * 2n/5n)
 
-// let sonlar= [12,3,56,89,1,0,45]
+let sonlar= [12,3,56,89,1,0,45]
 
-// console.log((Math.min(...sonlar)))
-// console.log((Math.min(12,5,6,3)))
-// console.log((Math.min(+sonlar)))
+console.log((Math.min(...sonlar)))
+console.log((Math.min(12,5,6,3)))
+console.log((Math.min(+sonlar)))
 
-// let g = -25.612563
-// console.log(Math.abs(g))
+let g = -25.612563
+console.log(Math.abs(g))
 
-// let grendeur = true 
-// console.log(grendeur? 'Sotib olaman' : 'Boshqasini olishni oylab koraman' ) 
+let grendeur = true 
+console.log(grendeur? 'Sotib olaman' : 'Boshqasini olishni oylab koraman' ) 
 
-// let f = '123654'
-// console.log(Number(f.length))
+let f = '123654'
+console.log(Number(f.length))
 
 let a='12345679'
 console.log(a.slice(-3))
