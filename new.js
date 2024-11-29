@@ -107,3 +107,7 @@ console.log(Number(f.length))
 
 let a='12345679'
 console.log(a.slice(-3))
+ 
+let e = 'erimni'
+let e1='sevaman'
+console.log(e.concat(' ',e1))
