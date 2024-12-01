@@ -111,3 +111,7 @@ console.log(a.slice(-3))
 let e = 'erimni'
 let e1='sevaman'
 console.log(e.concat(' ',e1))
+
+let xz = 256;
+let xs = 253;
+console.log(xz+xs)
