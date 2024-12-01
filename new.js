@@ -115,3 +115,12 @@ console.log(e.concat(' ',e1))
 let xz = 256;
 let xs = 253;
 console.log(xz+xs)
+
+
+obj ={
+    name:'Shokhzoda',
+    surname: 'Panjizoda',
+    age: 35
+}
+
+console.log( obj.name +' '+ obj.surname+' '+ 'is' +' '+ obj.age + ' '+ 'years old')
