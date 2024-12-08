@@ -406,7 +406,105 @@ let func21=(a,b,c)=>{
 let func22 =(a,b)=>{
     let c=0
     if(c=a-b || c===b-a){
-        return c
+        return Math.abs(c)
     }
 }
-console.log(func22(2,6))
+// console.log(func22(-2,6))
+
+//  ======================================ISSUE 26==========================================//
+
+let func23=(a)=>{
+    if(a<0){
+        return a*(-1) 
+    }
+    else{
+        return a
+    }
+}
+// console.log(func23(-15))
+
+//  ======================================ISSUE 27==========================================//
+let func27=(a)=>{
+    if(a<10){
+        return 1 
+    }
+    else if(a<100){
+        return 2
+    }
+    else if(a<999){
+        return 3
+    }
+    else{
+        return "bunday qiymat bizda yo'q"
+    }
+}
+// console.log(func27(1000))
+
+//  ======================================ISSUE 28==========================================//
+
+
+let func28=(a,b,c,d)=>{
+    if(a>=0 && b>=0 && c>=0 && d>=0){
+        return 'true '
+    }
+       else{
+        return 'false'
+    }
+}
+// console.log(func28(2,3,-5,8))
+
+//  ======================================ISSUE 29==========================================//
+
+let func29=(a,b,c,)=>{
+    if(a%2!==0 && b%2!==0 && c%2!==0){
+        return 1
+    }
+       else if(a%2===0 || b%2!==0 || c%2!==0) {
+        return 3
+    }
+    else if(a%2===0 && b%2===0 && c%2===0){
+return 2
+    }
+    else {
+        return 0
+    }
+}
+// console.log(func29('a',4,6))
+
+
+//  ======================================ISSUE 30==========================================//
+
+let func30=(a,b,c,)=>{
+    if(a%2===0 && b%2===0 || c%2===0 ){
+        return 1
+    }
+       else if(a%2!==0 && b%2!==0 || c%2!==0) {
+        return 2
+    }
+       else if(
+        String(a) && String(b) || String(c)
+    ){
+        return 0
+    }
+}
+console.log(func30('l','l','l'))
+
+//  ======================================ISSUE 31==========================================//
+
+let func31=(a,b,c,)=>{
+    let d=0
+    
+     if(a<=0 || b<=0 || c<=0){
+        return 0
+    }
+    else if(d=String(a)+String(b)+String(c)){
+        return Number(d)
+        // return d
+    }
+}
+// console.log(func31(5,2,2))
+
+
+
+
+
