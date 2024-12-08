@@ -47,21 +47,20 @@ let car = (cars[0] = "malibu");
 //     console.log(x=1)
 //      console.log(z)
 
+// let married = 'widowe'
+// if(married === 'yes'){
+//              console.log('you will accept')
 
-    // let married = 'widowe'
-    // if(married === 'yes'){
-    //              console.log('you will accept')
+// }
+//  else if(married=='widowed'){
+//      console.log('not accepted')
 
-    // }
-    //  else if(married=='widowed'){
-    //      console.log('not accepted')
-
-    // }
-    //  else if(married ='engaged'){
-    //     console.log('you can apply after wedding')
-    //  }
-    //  else{console.log('Invalid answer');
-    //  }
+// }
+//  else if(married ='engaged'){
+//     console.log('you can apply after wedding')
+//  }
+//  else{console.log('Invalid answer');
+//  }
 
 //      let abroad = 'ha'
 //      let abroad1 = 0
@@ -291,9 +290,9 @@ let func13 = (a) => {
 //  ======================================ISSUE 17==========================================//
 
 let func14 = (a, b, c) => {
-  if (a + b + c === 180 ) {
+  if (a + b + c === 180) {
     return "true";
-  } else if(a,b,c<=0) {
+  } else if ((a, b, c <= 0)) {
     return "false";
   }
 };
@@ -301,210 +300,272 @@ let func14 = (a, b, c) => {
 
 //  ======================================ISSUE 18==========================================//
 
-let func15=(a,b,c)=>{
-    if(a<b+c && b<a+c && c<b+a){
-        return 'true'
-    }
-    else{
-        return 'false'
-    }
-}
+let func15 = (a, b, c) => {
+  if (a < b + c && b < a + c && c < b + a) {
+    return "true";
+  } else {
+    return "false";
+  }
+};
 // console.log(func15(5,1,2))
 
 //  ======================================ISSUE 19==========================================//
 
-let func16=(a,b,c)=>{
-    if(a===b && b===c && a===c){
-        return 'equilateral'
-    }
-    else if(c===b || a===c || a===b){
-        return 'isosceles'
-    }
-    else if(a!==c && b!==c && a!==b ){
-        return 'scalene'
-    }
-}
+let func16 = (a, b, c) => {
+  if (a === b && b === c && a === c) {
+    return "equilateral";
+  } else if (c === b || a === c || a === b) {
+    return "isosceles";
+  } else if (a !== c && b !== c && a !== b) {
+    return "scalene";
+  }
+};
 // console.log(func16(10,10,10))
 
 //  ======================================ISSUE 20==========================================//
 
-let func17 =(a,b,c)=>{
-    let x=0
-    if(a>0) x++
-    if(b>0)x++
-    if(c>0)x++
-    
-     return x
-    
-}
+let func17 = (a, b, c) => {
+  let x = 0;
+  if (a > 0) x++;
+  if (b > 0) x++;
+  if (c > 0) x++;
+
+  return x;
+};
 // console.log(func17(1,-8,-27))
 
 //  ======================================ISSUE 21==========================================//
 
-let func18=(a,b)=>{
-    if(a>b){
-        return a
-    }
-    else if(a===b){
-        return 'Sonlar teng'
-    }
-    else{
-        return b
-    }
-
-}
+let func18 = (a, b) => {
+  if (a > b) {
+    return a;
+  } else if (a === b) {
+    return "Sonlar teng";
+  } else {
+    return b;
+  }
+};
 // console.log(func18(3,3))
 
 //  ======================================ISSUE 22==========================================//
 
-let func19=(a,b,c)=>{
-    let x=0
-    if(x=(a+b+c)/3){
-        return x
-    }
-}
+let func19 = (a, b, c) => {
+  let x = 0;
+  if ((x = (a + b + c) / 3)) {
+    return x;
+  }
+};
 // console.log(func19(3,10,8))
 
 //  ======================================ISSUE 23==========================================//
 
-let func20=(a,b,c)=>{
-    if(a<b && b<c){
-        return 1
-    }
-    else if(a<b && b>c){
-        return b
-    }
-    else if(a===b && b===c){
-        return 5
-    }
-    else{
-        return 0
-    }
-}
+let func20 = (a, b, c) => {
+  if (a < b && b < c) {
+    return 1;
+  } else if (a < b && b > c) {
+    return b;
+  } else if (a === b && b === c) {
+    return 5;
+  } else {
+    return 0;
+  }
+};
 // console.log(func20(6,8,9)) masala xato berilgan: Sonlarni taqqoslang
 
 //  ======================================ISSUE 24==========================================//
 
-let func21=(a,b,c)=>{
-    if(a===c){
-        return b
-    }
-    else if(b===c){
-        return a
-    }
-    else if(a===b){
-        return c
-    }
-    else{
-        return 0
-    }
-}
+let func21 = (a, b, c) => {
+  if (a === c) {
+    return b;
+  } else if (b === c) {
+    return a;
+  } else if (a === b) {
+    return c;
+  } else {
+    return 0;
+  }
+};
 // console.log(func21(6,5,11))
 
 //  ======================================ISSUE 25==========================================//
 
-let func22 =(a,b)=>{
-    let c=0
-    if(c=a-b || c===b-a){
-        return Math.abs(c)
-    }
-}
+let func22 = (a, b) => {
+  let c = 0;
+  if ((c = a - b || c === b - a)) {
+    return Math.abs(c);
+  }
+};
 // console.log(func22(-2,6))
 
 //  ======================================ISSUE 26==========================================//
 
-let func23=(a)=>{
-    if(a<0){
-        return a*(-1) 
-    }
-    else{
-        return a
-    }
-}
+let func23 = (a) => {
+  if (a < 0) {
+    return a * -1;
+  } else {
+    return a;
+  }
+};
 // console.log(func23(-15))
 
 //  ======================================ISSUE 27==========================================//
-let func27=(a)=>{
-    if(a<10){
-        return 1 
-    }
-    else if(a<100){
-        return 2
-    }
-    else if(a<999){
-        return 3
-    }
-    else{
-        return "bunday qiymat bizda yo'q"
-    }
-}
+let func27 = (a) => {
+  if (a < 10) {
+    return 1;
+  } else if (a < 100) {
+    return 2;
+  } else if (a < 999) {
+    return 3;
+  } else {
+    return "bunday qiymat bizda yo'q";
+  }
+};
 // console.log(func27(1000))
 
 //  ======================================ISSUE 28==========================================//
 
-
-let func28=(a,b,c,d)=>{
-    if(a>=0 && b>=0 && c>=0 && d>=0){
-        return 'true '
-    }
-       else{
-        return 'false'
-    }
-}
+let func28 = (a, b, c, d) => {
+  if (a >= 0 && b >= 0 && c >= 0 && d >= 0) {
+    return "true ";
+  } else {
+    return "false";
+  }
+};
 // console.log(func28(2,3,-5,8))
 
 //  ======================================ISSUE 29==========================================//
 
-let func29=(a,b,c,)=>{
-    if(a%2!==0 && b%2!==0 && c%2!==0){
-        return 1
-    }
-       else if(a%2===0 || b%2!==0 || c%2!==0) {
-        return 3
-    }
-    else if(a%2===0 && b%2===0 && c%2===0){
-return 2
-    }
-    else {
-        return 0
-    }
-}
+let func29 = (a, b, c) => {
+  if (a % 2 !== 0 && b % 2 !== 0 && c % 2 !== 0) {
+    return 1;
+  } else if (a % 2 === 0 || b % 2 !== 0 || c % 2 !== 0) {
+    return 3;
+  } else if (a % 2 === 0 && b % 2 === 0 && c % 2 === 0) {
+    return 2;
+  } else {
+    return 0;
+  }
+};
 // console.log(func29('a',4,6))
-
 
 //  ======================================ISSUE 30==========================================//
 
-let func30=(a,b,c,)=>{
-    if(a%2===0 && b%2===0 || c%2===0 ){
-        return 1
-    }
-       else if(a%2!==0 && b%2!==0 || c%2!==0) {
-        return 2
-    }
-       else if(
-        String(a) && String(b) || String(c)
-    ){
-        return 0
-    }
-}
-console.log(func30('l','l','l'))
+let func30 = (a, b, c) => {
+  if (
+    (a % 2 === 0 && b % 2 === 0) ||
+    (a % 2 === 0 && c % 2 === 0) ||
+    (c % 2 === 0 && b % 2 === 0)
+  ) {
+    return 1;
+  } else if (
+    (a % 2 === 1 && b % 2 === 1) ||
+    (a % 2 === 1 && c % 2 === 1) ||
+    (c % 2 === 1 && b % 2 === 1)
+  ) {
+    return 2;
+  } else {
+    return 0;
+  }
+};
+// console.log(func30(2,3,'l'))
 
 //  ======================================ISSUE 31==========================================//
 
-let func31=(a,b,c,)=>{
-    let d=0
-    
-     if(a<=0 || b<=0 || c<=0){
-        return 0
-    }
-    else if(d=String(a)+String(b)+String(c)){
-        return Number(d)
-        // return d
-    }
-}
+let func31 = (a, b, c) => {
+  let d = 0;
+
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return 0;
+  } else if ((d = String(a) + String(b) + String(c))) {
+    return Number(d);
+    // return d
+  }
+};
 // console.log(func31(5,2,2))
 
+//  ======================================ISSUE 32==========================================//
 
+let func32 = (a) => {
+  let x = 0;
+  for (i = 0; i <= a; i++) {
+    x += i;
+  }
+  console.log(x);
 
+  return "tugadi";
+};
+// console.log(func32(7))
 
+//  ======================================ISSUE 33==========================================//
 
+let func33 = (a) => {
+  let x = 0;
+  for (let i = 0; i <= a; i++) {
+    if (i % 2 === 0) {
+      x += i;
+    }
+  }
+  console.log(x);
+
+  return "tugadi";
+};
+// console.log(func33(7))
+
+//  ======================================ISSUE 34==========================================//
+
+let func34 = (a) => {
+  let x = 0;
+  for (let i = 0; i <= a; i++) {
+    if (i % 2 !== 0) {
+      x += i;
+    }
+  }
+  console.log(x);
+
+  return "tugadi";
+};
+// console.log(func34(10))
+
+//  ======================================ISSUE 35==========================================//
+
+let func35 = (a, b) => {
+  let x = 0;
+  for (let i = a; i < b; i++) {
+    if (i % 2 === 0) {
+      x++;
+    }
+  }
+  console.log(x);
+
+  return "tugadi";
+};
+// console.log(func35(24,31))
+
+//  ======================================ISSUE 36==========================================//
+
+let func36 = (a, b) => {
+  let x = 0;
+  for (let i = a; i < b; i++) {
+    x += i;
+  }
+  console.log(x);
+
+  return "tugadi";
+};
+// console.log(func36(2,8))
+
+//  ======================================ISSUE 37==========================================//
+
+let func37 = (a, b) => {
+  let x = 0;
+  let y = 0;
+  for (let i = a; i < b; i++) {
+    if (i % 3 === 0) {
+      x += i;
+      y++;
+    }
+  }
+
+  return [x, y];
+};
+console.log(func37(4, 15));
