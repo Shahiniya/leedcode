@@ -701,7 +701,45 @@ return sum===original ? true : false
 
 //  ======================================ISSUE 51==========================================//
 
-const func51=()=>{
-  
+const func51=(n)=>{
+ let result=1
+  for(let i=1; i<=n; i++){
+    result=result*i
+  }
+  return result
 }
-console.log(func51())
+// console.log(func51(10))
+
+//  ======================================ISSUE 52==========================================//
+
+const func52=(n)=>{
+  let f0=1;
+  let f1=2;
+     let fn=0;
+  for(let i=2; i<=n; i++){
+    fn=f0+f1;
+    f0=f1;
+    f1=fn;
+  }
+  return fn
+}
+// console.log(func52(15))
+
+const modifiedFibonacci = (n) => {
+  if (n === 0) return 1; // Modifikatsiya: F_0 = 1
+  if (n === 1) return 2; // Modifikatsiya: F_1 = 2
+
+  let f0 = 1; // Boshlang'ich qiymat F_0
+  let f1 = 1; // Boshlang'ich qiymat F_1
+  let fn = 0;
+
+  for (let i = 2; i <= n; i++) {
+      fn = f0 + f1; // Yangi Fibonacci soni
+      f0 = f1; // F_0 ni yangilash
+      f1 = fn; // F_1 ni yangilash
+  }
+
+  return fn; // n-chi elementni qaytarish
+};
+
+console.log(modifiedFibonacci(15)); // Natija: 985
