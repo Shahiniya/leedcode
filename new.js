@@ -465,11 +465,11 @@ const func32 = (a) => {
   for (i = 0; i <= a; i++) {
     x += i;
   }
-  console.log(x);
 
-  return "tugadi";
+  return x
 };
-// console.log(func32(7))
+// // console.log(func32(7))
+// for
 
 //  ======================================ISSUE 33==========================================//
 const func33 = (a) => {
@@ -479,11 +479,12 @@ const func33 = (a) => {
       x += i;
     }
   }
-  console.log(x);
-
-  return "tugadi";
+ 
+  return x
 };
 // console.log(func33(7))
+// console.log(func33(10))
+
 
 //  ======================================ISSUE 34==========================================//
 const func34 = (a) => {
@@ -507,9 +508,8 @@ const func35 = (a, b) => {
       x++;
     }
   }
-  console.log(x);
+ return x
 
-  return "tugadi";
 };
 // console.log(func35(24,31))
 
@@ -573,8 +573,8 @@ const func39=(a,b)=>{
 
 const func40=(a)=>{
     let x=1
-    for(i=1; i<=a; i++){
-       x*= i**5; 
+    for(i=1; i<=5; i++){
+       x*= a
     }
     return x
 }
@@ -602,4 +602,106 @@ const func42=(a,n)=>{
 }
 return y
 }
-console.log(func42(3,4))
+// console.log(func42(3,4))
+
+//  ======================================ISSUE 43==========================================//
+
+const func43=(a)=>{
+    let y=0;
+    for (i=1; i<a; i++){
+        if(a%i===0){
+            y+=i;            
+        }
+    }
+    return y===a ? 'true' : 'false'
+}
+// console.log(func43(6))
+
+//  ======================================ISSUE 44==========================================//
+
+const func44=(n)=>{
+    let x=0
+    for(i=1; i<=n; i++){
+        x+=i*i
+    }
+    return x
+}
+// console.log(func44(7))
+
+//  ======================================ISSUE 45==========================================//
+
+const func45=(n)=>{
+    let x=0
+    let y=n.toString().split('')
+    for(i=0; i<y.length; i++){
+        x+=Math.pow(Number(y[i]),3)
+       
+    }
+    return x
+}
+// console.log(func45(153))
+
+//  ======================================ISSUE 46==========================================//
+const func46=(n)=>{
+let x=0
+for(let i=1; i<=n; i++){
+if(n%i===0){
+    x++
+}
+}
+return  x===2 ?true : false
+}
+// console.log(func46(8))
+// tub son
+
+//  ======================================ISSUE 47==========================================//
+const func47=(n)=>{
+  let x=0
+  for(let i=0; n>0; n=Math.floor(n/10)){
+    x++
+  }
+  return x
+}
+// console.log(func47(12))
+
+//  ======================================ISSUE 48==========================================//
+
+const func48=(n)=>{
+  let sum=0
+  for(let i=0; n>0; n=Math.floor(n/10)){
+    sum+=n%10
+  }
+  return sum
+}
+// console.log(func48(35))
+
+//  ======================================ISSUE 49==========================================//
+const func49=(n)=>{
+      let x=0
+      for(let i=0; n>0; n=Math.floor(n/10)){
+      let r=n%10;
+        x=x*10+r
+      }
+      return x
+}
+// console.log(func49(9865423))
+
+//  ======================================ISSUE 50==========================================//
+
+const func50=(n)=>{
+  let sum=0
+  let original=n
+  for(let i=0; n>0; n=Math.floor(n/10)){
+    let r=n%10;
+     sum=sum*10+r
+  }
+return sum===original ? true : false
+}
+// console.log(func50(12321))
+
+//  ======================================ISSUE 51==========================================//
+
+const func51=()=>{
+  
+}
+console.log(func51())
