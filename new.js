@@ -825,12 +825,58 @@ const func58=(n)=>{
     shape=''
     for(let i=0; i<n; i++){
       for(let j=0; j<n; j++){
-        if(count++){
-          shape+= `${i},${j}`
+          shape+= `${count}`.padEnd(8,' ')
+          // shape+=count
+        count++
+
+        
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func58(10))
+// sonlar ro'yxati
+
+//  ======================================ISSUE 59==========================================//
+const func59 =(n)=>{
+    count=0
+    shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<=i; j++){
+        // shape+='*'
+        // count++
+        if(j===i){
+          shape+='*'
+          count++
+        }
+        else{
+          shape+=' '
+          count++
         }
       }
       shape+='\n'
     }
     return shape
 }
-console.log(func58(10))
+console.log(func59(5))
+
+//  ======================================ISSUE 60==========================================//
+const func60=(n)=>{
+    count=0
+    shape=''
+    for(let i=0; i<=n; i++){
+      for(let j=0; j<=n; j++){
+          if(i===j){
+            shape+=`${i},${j}`
+          }
+          else{
+            shape+=' '
+            
+          }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func60(5))
