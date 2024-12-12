@@ -742,4 +742,95 @@ const modifiedFibonacci = (n) => {
   return fn; // n-chi elementni qaytarish
 };
 
-console.log(modifiedFibonacci(15)); // Natija: 985
+// console.log(modifiedFibonacci(15)); // Natija: 985
+
+//  ======================================ISSUE 53==========================================//
+// nested for 
+
+const func53=(a)=>{
+  let x=0
+  for(let i=1; i<a; i++){
+    x+=1/i
+  }
+  return x
+}
+// console.log(func53(10))
+
+//  ======================================ISSUE 54==========================================//
+
+const func54=(n)=>{
+    shape=''
+    for(let i=1; i<=n; i++){
+      for(let k=1; k<=n; k++){
+        shape+= '* '
+      }
+      shape+='\n' 
+    }
+    return shape
+}
+// console.log(func54(3))
+
+//  ======================================ISSUE 55==========================================//
+
+const func55=(n)=>{
+    shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<n; j++){
+        shape += `(${i},${j})`
+      }
+      shape+= '\n'
+    }
+    return shape
+}
+// console.log(func55(10))
+
+//  ======================================ISSUE 56==========================================//
+
+const func56=(n)=>{
+  shape=''
+  for(let i=0; i<n; i++){
+    for(let j=0; j<n; j++){
+      if(i===0 || i===9 || j===0){
+        shape+=`(${i},${j})`
+      }
+    }
+    shape+= '\n'
+  }
+  return shape
+}
+// console.log(func56(10))
+//  ======================================ISSUE 57==========================================//
+
+const func57=(n)=>{
+    shape=''
+    for(let i=0;i<n; i++){
+      for(let j=0; j<n; j++){
+        if(i===0 || i===9 || j%2===0){
+          shape+= `(${i},${j})`
+        }
+
+        else if(j%2!==0){
+          shape+= `     `
+        }      
+      }
+      shape+='\n'
+    }
+    return shape.trimEnd()
+  }
+// console.log(func57(10))
+
+//  ======================================ISSUE 58==========================================//
+const func58=(n)=>{
+    count=0
+    shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<n; j++){
+        if(count++){
+          shape+= `${i},${j}`
+        }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+console.log(func58(10))
