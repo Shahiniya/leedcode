@@ -389,16 +389,17 @@ const func23 = (a) => {
 // console.log(func23(-15))
 
 //  ======================================ISSUE 27==========================================//const func27 = (a) => {
-const func27=(a)=>{
-    if (a < 10) {
-  return 1;
-} else if (a < 100) {
-  return 2;
-} else if (a < 999) {
-  return 3;
-} else {
-  return "bunday qiymat bizda yo'q";
-}}
+const func27 = (a) => {
+  if (a < 10) {
+    return 1;
+  } else if (a < 100) {
+    return 2;
+  } else if (a < 999) {
+    return 3;
+  } else {
+    return "bunday qiymat bizda yo'q";
+  }
+};
 
 // console.log(func27(1000))
 
@@ -466,7 +467,7 @@ const func32 = (a) => {
     x += i;
   }
 
-  return x
+  return x;
 };
 // // console.log(func32(7))
 // for
@@ -479,12 +480,11 @@ const func33 = (a) => {
       x += i;
     }
   }
- 
-  return x
+
+  return x;
 };
 // console.log(func33(7))
 // console.log(func33(10))
-
 
 //  ======================================ISSUE 34==========================================//
 const func34 = (a) => {
@@ -508,8 +508,7 @@ const func35 = (a, b) => {
       x++;
     }
   }
- return x
-
+  return x;
 };
 // console.log(func35(24,31))
 
@@ -544,11 +543,11 @@ const func37 = (a, b) => {
 
 const func38 = (a, b) => {
   let x = 0;
-//   let y = 0;
+  //   let y = 0;
   for (i = a; i < b; i++) {
     if (i % 2 === 0 && i % 3 === 0) {
       x++;
-    //   y++;
+      //   y++;
     }
   }
   return { x };
@@ -557,172 +556,170 @@ const func38 = (a, b) => {
 
 //  ======================================ISSUE 39==========================================//
 
-const func39=(a,b)=>{
-    let x=0;
-    for(i=a; i<=b ;i++){
-        if(i>0){
-     x++
-
-        }
+const func39 = (a, b) => {
+  let x = 0;
+  for (i = a; i <= b; i++) {
+    if (i > 0) {
+      x++;
     }
-    return x
-}
+  }
+  return x;
+};
 // console.log(func39(-1,10))
 
 //  ======================================ISSUE 40==========================================//
 
-const func40=(a)=>{
-    let x=1
-    for(i=1; i<=5; i++){
-       x*= a
-    }
-    return x
-}
+const func40 = (a) => {
+  let x = 1;
+  for (i = 1; i <= 5; i++) {
+    x *= a;
+  }
+  return x;
+};
 // console.log(func40(2))
 
 //  ======================================ISSUE 41==========================================//
 
-const func41=(a,n)=>{
-    let x=1
-    for(i=1; i<=a; i++){
-        x*=i**n
-    }
-    return x
-}
+const func41 = (a, n) => {
+  let x = 1;
+  for (i = 1; i <= a; i++) {
+    x *= i ** n;
+  }
+  return x;
+};
 // console.log(func41(2,6))
 
 //  ======================================ISSUE 42==========================================//
 
-const func42=(a,n)=>{
-    let x=0
-    let y=0
-    for(i=1; i<=n; i++){
-       x= x*10+a;
-        y+=x
-}
-return y
-}
+const func42 = (a, n) => {
+  let x = 0;
+  let y = 0;
+  for (i = 1; i <= n; i++) {
+    x = x * 10 + a;
+    y += x;
+  }
+  return y;
+};
 // console.log(func42(3,4))
 
 //  ======================================ISSUE 43==========================================//
 
-const func43=(a)=>{
-    let y=0;
-    for (i=1; i<a; i++){
-        if(a%i===0){
-            y+=i;            
-        }
+const func43 = (a) => {
+  let y = 0;
+  for (i = 1; i < a; i++) {
+    if (a % i === 0) {
+      y += i;
     }
-    return y===a ? 'true' : 'false'
-}
+  }
+  return y === a ? "true" : "false";
+};
 // console.log(func43(6))
 
 //  ======================================ISSUE 44==========================================//
 
-const func44=(n)=>{
-    let x=0
-    for(i=1; i<=n; i++){
-        x+=i*i
-    }
-    return x
-}
+const func44 = (n) => {
+  let x = 0;
+  for (i = 1; i <= n; i++) {
+    x += i * i;
+  }
+  return x;
+};
 // console.log(func44(7))
 
 //  ======================================ISSUE 45==========================================//
 
-const func45=(n)=>{
-    let x=0
-    let y=n.toString().split('')
-    for(i=0; i<y.length; i++){
-        x+=Math.pow(Number(y[i]),3)
-       
-    }
-    return x
-}
+const func45 = (n) => {
+  let x = 0;
+  let y = n.toString().split("");
+  for (i = 0; i < y.length; i++) {
+    x += Math.pow(Number(y[i]), 3);
+  }
+  return x;
+};
 // console.log(func45(153))
 
 //  ======================================ISSUE 46==========================================//
-const func46=(n)=>{
-let x=0
-for(let i=1; i<=n; i++){
-if(n%i===0){
-    x++
-}
-}
-return  x===2 ?true : false
-}
+const func46 = (n) => {
+  let x = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      x++;
+    }
+  }
+  return x === 2 ? true : false;
+};
 // console.log(func46(8))
 // tub son
 
 //  ======================================ISSUE 47==========================================//
-const func47=(n)=>{
-  let x=0
-  for(let i=0; n>0; n=Math.floor(n/10)){
-    x++
+const func47 = (n) => {
+  let x = 0;
+  for (let i = 0; n > 0; n = Math.floor(n / 10)) {
+    x++;
   }
-  return x
-}
+  return x;
+};
 // console.log(func47(12))
 
 //  ======================================ISSUE 48==========================================//
 
-const func48=(n)=>{
-  let sum=0
-  for(let i=0; n>0; n=Math.floor(n/10)){
-    sum+=n%10
+const func48 = (n) => {
+  let sum = 0;
+  for (let i = 0; n > 0; n = Math.floor(n / 10)) {
+    sum += n % 10;
   }
-  return sum
-}
+  return sum;
+};
 // console.log(func48(35))
 
 //  ======================================ISSUE 49==========================================//
-const func49=(n)=>{
-      let x=0
-      for(let i=0; n>0; n=Math.floor(n/10)){
-      let r=n%10;
-        x=x*10+r
-      }
-      return x
-}
+const func49 = (n) => {
+  let x = 0;
+  for (let i = 0; n > 0; n = Math.floor(n / 10)) {
+    let r = n % 10;
+    x = x * 10 + r;
+  }
+  return x;
+};
 // console.log(func49(9865423))
 
 //  ======================================ISSUE 50==========================================//
 
-const func50=(n)=>{
-  let sum=0
-  let original=n
-  for(let i=0; n>0; n=Math.floor(n/10)){
-    let r=n%10;
-     sum=sum*10+r
+const func50 = (n) => {
+  let sum = 0;
+  let original = n;
+  for (let i = 0; n > 0; n = Math.floor(n / 10)) {
+    let r = n % 10;
+    sum = sum * 10 + r;
   }
-return sum===original ? true : false
-}
+  return sum === original ? true : false;
+};
 // console.log(func50(12321))
 
 //  ======================================ISSUE 51==========================================//
 
-const func51=(n)=>{
- let result=1
-  for(let i=1; i<=n; i++){
-    result=result*i
+const func51 = (n) => {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result = result * i;
   }
-  return result
-}
+  return result;
+};
 // console.log(func51(10))
 
 //  ======================================ISSUE 52==========================================//
 
-const func52=(n)=>{
-  let f0=1;
-  let f1=2;
-     let fn=0;
-  for(let i=2; i<=n; i++){
-    fn=f0+f1;
-    f0=f1;
-    f1=fn;
+const func52 = (n) => {
+  let f0 = 1;
+  let f1 = 2;
+  let fn = 0;
+  for (let i = 2; i <= n; i++) {
+    fn = f0 + f1;
+    f0 = f1;
+    f1 = fn;
   }
-  return fn
-}
+  return fn;
+};
 // console.log(func52(15))
 
 const modifiedFibonacci = (n) => {
@@ -734,9 +731,9 @@ const modifiedFibonacci = (n) => {
   let fn = 0;
 
   for (let i = 2; i <= n; i++) {
-      fn = f0 + f1; // Yangi Fibonacci soni
-      f0 = f1; // F_0 ni yangilash
-      f1 = fn; // F_1 ni yangilash
+    fn = f0 + f1; // Yangi Fibonacci soni
+    f0 = f1; // F_0 ni yangilash
+    f1 = fn; // F_1 ni yangilash
   }
 
   return fn; // n-chi elementni qaytarish
@@ -745,109 +742,197 @@ const modifiedFibonacci = (n) => {
 // console.log(modifiedFibonacci(15)); // Natija: 985
 
 //  ======================================ISSUE 53==========================================//
-// nested for 
+// nested for
 
-const func53=(a)=>{
-  let x=0
-  for(let i=1; i<a; i++){
-    x+=1/i
+const func53 = (a) => {
+  let x = 0;
+  for (let i = 1; i < a; i++) {
+    x += 1 / i;
   }
-  return x
-}
+  return x;
+};
 // console.log(func53(10))
 
 //  ======================================ISSUE 54==========================================//
 
-const func54=(n)=>{
-    shape=''
-    for(let i=1; i<=n; i++){
-      for(let k=1; k<=n; k++){
-        shape+= '* '
-      }
-      shape+='\n' 
+const func54 = (n) => {
+  shape = "";
+  for (let i = 1; i <= n; i++) {
+    for (let k = 1; k <= n; k++) {
+      shape += "* ";
     }
-    return shape
-}
+    shape += "\n";
+  }
+  return shape;
+};
 // console.log(func54(3))
 
 //  ======================================ISSUE 55==========================================//
 
-const func55=(n)=>{
-    shape=''
-    for(let i=0; i<n; i++){
-      for(let j=0; j<n; j++){
-        shape += `(${i},${j})`
-      }
-      shape+= '\n'
+const func55 = (n) => {
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      shape += `(${i},${j})`;
     }
-    return shape
-}
+    shape += "\n";
+  }
+  return shape;
+};
 // console.log(func55(10))
 
 //  ======================================ISSUE 56==========================================//
 
-const func56=(n)=>{
-  shape=''
-  for(let i=0; i<n; i++){
-    for(let j=0; j<n; j++){
-      if(i===0 || i===9 || j===0){
-        shape+=`(${i},${j})`
+const func56 = (n) => {
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === 0 || i === 9 || j === 0) {
+        shape += `(${i},${j})`;
       }
     }
-    shape+= '\n'
+    shape += "\n";
   }
-  return shape
-}
+  return shape;
+};
 // console.log(func56(10))
 //  ======================================ISSUE 57==========================================//
 
-const func57=(n)=>{
-    shape=''
-    for(let i=0;i<n; i++){
-      for(let j=0; j<n; j++){
-        if(i===0 || i===9 || j%2===0){
-          shape+= `(${i},${j})`
-        }
-
-        else if(j%2!==0){
-          shape+= `     `
-        }      
+const func57 = (n) => {
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === 0 || i === 9 || j % 2 === 0) {
+        shape += `(${i},${j})`;
+      } else if (j % 2 !== 0) {
+        shape += `     `;
       }
-      shape+='\n'
     }
-    return shape.trimEnd()
+    shape += "\n";
   }
+  return shape.trimEnd();
+};
 // console.log(func57(10))
 
 //  ======================================ISSUE 58==========================================//
-const func58=(n)=>{
-    count=0
-    shape=''
-    for(let i=0; i<n; i++){
-      for(let j=0; j<n; j++){
-          shape+= `${count}`.padEnd(8,' ')
-          // shape+=count
-        count++
-
-        
-      }
-      shape+='\n'
+const func58 = (n) => {
+  count = 0;
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      shape += `${count}`.padEnd(8, " ");
+      // shape+=count
+      count++;
     }
-    return shape
-}
+    shape += "\n";
+  }
+  return shape;
+};
 // console.log(func58(10))
 // sonlar ro'yxati
 
 //  ======================================ISSUE 59==========================================//
-const func59 =(n)=>{
-    count=0
+const func59 = (n) => {
+  count = 0;
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j <= i; j++) {
+      // shape+='*'
+      // count++
+      if (j === i) {
+        shape += "*";
+        count++;
+      } else {
+        shape += " ";
+        count++;
+      }
+    }
+    shape += "\n";
+  }
+  return shape;
+};
+// console.log(func59(5))
+
+//  ======================================ISSUE 60==========================================//
+const func60 = (n) => {
+  count = 0;
+  shape = "";
+  for (let i = 0; i <= n; i++) {
+    for (let j = 0; j <= n; j++) {
+      if (i === j) {
+        shape += `${i},${j}`;
+      } else {
+        shape += " ";
+      }
+    }
+    shape += "\n";
+  }
+  return shape;
+};
+// console.log(func60(5))
+
+//  ======================================ISSUE 61==========================================//
+const func61 = (n) => {
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i + j === n - 1) {
+        shape += "*";
+      } else {
+        shape += " ";
+      }
+    }
+    shape += "\n";
+  }
+  return shape;
+};
+// console.log(func61(6));
+
+//  ======================================ISSUE 62==========================================//
+const func62 = (n) => {
+  shape = "";
+  count = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === j || j < i) {
+        shape += "*";
+        count++;
+      } else {
+        shape += " ";
+        count++;
+      }
+    }
+    shape += "\n";
+  }
+  return shape;
+};
+// console.log(func62(5))
+
+//  ======================================ISSUE 63==========================================//
+const func63 = (n) => {
+   shape ="";
+   count = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n-i; j++) {
+        shape += "*";
+        // count++;
+   
+         }
+    shape += "\n";
+  }
+  return shape;
+}
+// console.log(func63(5));
+
+//  ======================================ISSUE 64==========================================//
+
+const func64=(n)=>{
     shape=''
-    for(let i=0; i<n; i++){
-      for(let j=0; j<=i; j++){
-        // shape+='*'
-        // count++
-        if(j===i){
-          shape+='*'
+    count=0
+    for(let i=0; i<=n; i++){
+      for(let j=1; j<=n; j++){
+        if(i===j || j<i){
+          shape+=`${j}`
           count++
         }
         else{
@@ -856,27 +941,30 @@ const func59 =(n)=>{
         }
       }
       shape+='\n'
-    }
-    return shape
+      }
+      return shape
 }
-console.log(func59(5))
+// console.log(func64(5))
 
-//  ======================================ISSUE 60==========================================//
-const func60=(n)=>{
-    count=0
-    shape=''
-    for(let i=0; i<=n; i++){
-      for(let j=0; j<=n; j++){
-          if(i===j){
-            shape+=`${i},${j}`
+//  ======================================ISSUE 65==========================================//
+
+const func65=(n)=>{
+      shape=''
+      count=0
+      for(let i=1; i<=n; i++){
+        for(let j=1 ; j<=n; j++){
+          if(j===i || j<i){
+            shape+=`${i}`
+            count++
           }
           else{
             shape+=' '
-            
+            count++
           }
+        }
+        shape+='\n'
       }
-      shape+='\n'
-    }
-    return shape
+      return shape
 }
-// console.log(func60(5))
+// console.log(func65(5))
+//  ======================================ISSUE 66==========================================//
