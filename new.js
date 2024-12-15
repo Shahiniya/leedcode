@@ -910,78 +910,94 @@ const func62 = (n) => {
 
 //  ======================================ISSUE 63==========================================//
 const func63 = (n) => {
-   shape ="";
-   count = 0;
+  shape = "";
+  count = 0;
   for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n-i; j++) {
-        shape += "*";
-        // count++;
-   
-         }
+    for (let j = 0; j < n - i; j++) {
+      shape += "*";
+      // count++;
+    }
     shape += "\n";
   }
   return shape;
-}
+};
 // console.log(func63(5));
 
 //  ======================================ISSUE 64==========================================//
 
-const func64=(n)=>{
-    shape=''
-    count=0
-    for(let i=0; i<=n; i++){
-      for(let j=1; j<=n; j++){
-        if(i===j || j<i){
-          shape+=`${j}`
-          count++
-        }
-        else{
-          shape+=' '
-          count++
-        }
+const func64 = (n) => {
+  shape = "";
+  count = 0;
+  for (let i = 0; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (i === j || j < i) {
+        shape += `${j}`;
+        count++;
+      } else {
+        shape += " ";
+        count++;
       }
-      shape+='\n'
-      }
-      return shape
-}
+    }
+    shape += "\n";
+  }
+  return shape;
+};
 // console.log(func64(5))
 
 //  ======================================ISSUE 65==========================================//
 
-const func65=(n)=>{
-      shape=''
-      count=0
-      for(let i=1; i<=n; i++){
-        for(let j=1 ; j<=n; j++){
-          if(j===i || j<i){
-            shape+=`${i}`
-            count++
-          }
-          else{
-            shape+=' '
-            count++
-          }
-        }
-        shape+='\n'
+const func65 = (n) => {
+  shape = "";
+  count = 0;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (j === i || j < i) {
+        shape += `${i}`;
+        count++;
+      } else {
+        shape += " ";
+        count++;
       }
-      return shape
-}
+    }
+    shape += "\n";
+  }
+  return shape;
+};
 // console.log(func65(5))
 //  ======================================ISSUE 66==========================================//
-const func66=(n)=>{
-    shape=''
-    for(let i=0; i<n; i++){
-      for(let l=0; l<n+i; l++){
-        if( l<i){
-          shape+=' '
-        }
-        else{
-          shape+='*'
-        }
+const func66 = (n) => {
+  shape = "";
+  for (let i = 0; i < n; i++) {
+    for (let l = 0; l < n + i; l++) {
+      if (l < i) {
+        shape += " ";
+      } else {
+        shape += "*";
       }
-      shape+='\n'
     }
-    return shape
-}
+    shape += "\n";
+  }
+  return shape;
+};
 // console.log(func66(5))
 //  ======================================ISSUE 67==========================================//
+const func67 = (n) => {
+  shape = "";
+  for (let i = 0; i <n; i++) {
+    if (i === 0 || i === n - 1) {
+      for (let j = 0; j <=n; j++) {
+        shape += "*";
+      }
+    } else {
+      shape += "*";
+      for (let j = 0; j <= n - 2; j++) {
+        shape += " ";
+      }
+      shape += "*";
+    }
+    shape += "\n";
+  }
+  return shape;
+};
+
+console.log(func67(5));
