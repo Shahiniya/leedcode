@@ -886,7 +886,7 @@ const func61 = (n) => {
   }
   return shape;
 };
-// console.log(func61(6));
+console.log(func61(6));
 
 //  ======================================ISSUE 62==========================================//
 const func62 = (n) => {
