@@ -886,7 +886,7 @@ const func61 = (n) => {
   }
   return shape;
 };
-console.log(func61(6));
+// console.log(func61(6));
 
 //  ======================================ISSUE 62==========================================//
 const func62 = (n) => {
@@ -1000,4 +1000,96 @@ const func67 = (n) => {
   return shape;
 };
 
-console.log(func67(5));
+// console.log(func67(5));
+//  ======================================ISSUE 68==========================================//
+// for ketma-keetlik
+
+const func68=(n)=>{
+   let count=0
+    for(let i=1; i<n; i++){
+      count+=1/i
+    }
+    return count
+}
+// console.log(func68(10))
+
+//  ======================================ISSUE 69==========================================//
+// to'rt burchak
+const func69=(n)=>{
+    let shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<n; j++){
+        shape+='*'
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func69(3))
+
+//  ======================================ISSUE 70==========================================//
+// sonlar juftligi
+const func70=(n)=>{
+ let shape=''
+
+ for(let i=0; i<n; i++){
+  for(let j=0; j<n; j++){
+    shape+=`(${i},${j})`
+    }
+    shape+='\n'
+ }
+ return shape
+}
+// console.log(func70(10))
+//  ======================================ISSUE 71==========================================//
+// sonlar juftligi va c harfi
+const func71=(n)=>{
+    let shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<n; j++){
+        if(i===0 || i===9 || j===0){
+          shape+=`(${i},${j})`
+        }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func71(10))
+//  ======================================ISSUE 72==========================================//
+// sonlar juftligida ustunlar
+const func72=(n)=>{
+    let shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<n; j++){
+        if(i===0 || i===9 || j===0 || j%2===0){
+          shape+=`(${i},${j})`
+        }
+        else{
+          shape+='     '
+        }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func72(10))
+//  ======================================ISSUE 73==========================================//
+// sonlar ro'yxati
+const func73=(n)=>{
+     let shape=''
+     count=0
+     for(let i=0; i<n; i++){
+      for(let j=0; j<n; j++){
+              shape+=`${i}${j} `
+        //  if(i===0){
+        //   shape+=' '
+        //  }
+          
+                
+      }
+      shape+='\n'
+     }
+     return shape
+}
+console.log(func73(10))
