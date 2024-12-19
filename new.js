@@ -1078,18 +1078,21 @@ const func72=(n)=>{
 // sonlar ro'yxati
 const func73=(n)=>{
      let shape=''
-     count=0
+    //  count=0
      for(let i=0; i<n; i++){
       for(let j=0; j<n; j++){
-              shape+=`${i}${j} `
-        //  if(i===0){
-        //   shape+=' '
-        //  }
-          
-                
+         if(i===0){
+          shape+=`${j}  `
+         }
+          else{
+            shape+=`${i}${j} `
+          }               
       }
       shape+='\n'
      }
      return shape
 }
-console.log(func73(10))
+// console.log(func73(10))
+
+
+
