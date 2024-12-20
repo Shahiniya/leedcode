@@ -1093,6 +1093,135 @@ const func73=(n)=>{
      return shape
 }
 // console.log(func73(10))
+//  ======================================ISSUE 74==========================================//
+// diaganal
+const func74=(n)=>{
+    let shape=''
+    for(let i=0; i<=n; i++){
+      for(let j=0; j<n; j++){
+        if(i!==j ){
+          shape+=' '
+        }
+        else{
+          shape+='*'
+        }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func74(5))
+//  ======================================ISSUE 75==========================================//
+// sonlar diaganali
+const func75=(n)=>{
+    let shape=''
+    for(let i=0; i<=n; i++){
+        for(let j=0; j<=n; j++){
+          if(i!==j){
+            shape+=' '
+          }
+          else{
+            shape+=`(${i},${j})`
+          }
+        }
+        shape+='\n'
+    }
+    return shape
+}
+// console.log(func75(5))
+//  ======================================ISSUE 76==========================================//
+// teskari diaganal
+const func76=(n)=>{
+      let shape=''
+      for(let i=0; i<n; i++){
+        for(let j=0; j<n; j++){
+          if(i!==n-j){
+            shape+=' '
+          }
+          else{
+            shape+='*'
+          }
+        }
+        shape+='\n'
+      }
+      return shape
+}
+// console.log(func76(6))
+//  ======================================ISSUE 77==========================================//
+// to'g'ri burchakli uchburchak
+const func77=(n)=>{
+    let shape=''
+    for(let i=0; i<=n; i++){
+      for(let j=0; j<n; j++){
+        if(j<i){
+          shape+='*'
+        }
+        else{
+          shape+=' '
+        }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func77(5))
+//  ======================================ISSUE 78==========================================//
+// teskari uchburchak
+const func78=(n)=>{
+      let shape=''
+      for(let i=0; i<=n; i++){
+        for(let j=0; j<=n; j++){
+        if(j>i){
+          shape+='*'
+        }
+                 
+        }
+        shape+='\n'
+      }
+      return shape
+}
+// console.log(func78(5))
+//  ======================================ISSUE 79==========================================//
+// sonlar uchbuchagi
+const func79=(n)=>{
+      let shape=''
+      for(let i=1; i<=n; i++){
+        for(let j=1; j<=n; j++){
+          if(j<i){
+            shape+=`${j}`
+          }         
+          
+        }
+        shape+='\n'
+      }
+      return shape
+}
+// console.log(func79(6))
+//  ======================================ISSUE 80==========================================//
+const func80=(n)=>{
+    let shape=''
+    for(let i=1; i<n; i++){
+      for(let j=1; j<n; j++){
+        if(i===j || j<i){
+          shape+=`${i}`
 
-
-
+        }
+      }
+      shape+='\n'
+    }
+    return shape
+}
+// console.log(func80(6))
+//  ======================================ISSUE 81==========================================//
+// paralellogram
+const func81=(n)=>{
+    let shape=''
+    for(let i=0; i<n; i++){
+      for(let j=0; j<n+1; j++){
+        shape+=(i+j)*2
+      }
+      shape+='\n'
+    }
+    return shape
+}
+console.log(func81(5))
