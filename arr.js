@@ -104,5 +104,101 @@ const updateUser=(userId,body)=>{
      employees[index]={...employees[index],...body};
      renderData(employees)
 }
-updateUser('2',updatedUser)
+// updateUser('2',updatedUser)
+
+const schoolDB={
+  g1:{
+    name:'G1 Frontend Bootcamp',
+    students:[
+      {
+        _id:'1',
+        name:'John Doe',
+        age:35,
+        grade:'1A'
+      },
+      {
+        _id:'1',
+        name: 'Michel Doe',
+        age:25,
+        grade:'2A'
+      },
+      {
+        _id:'1',
+        name:'Jane Doe',
+        age:22,
+        grade:'3A'
+      },
+    ]
+  },
+  g2:{
+    name:'G2 Frontend Bootcamp',
+    students:[
+      {
+        _id:'1',
+        name:'John Doe',
+        age:11,
+        grade:'1A'
+      },
+      {
+        _id:'2',
+        name: 'Michel Doe',
+        age:15,
+        grade:'2A'
+      },
+      {
+        _id:'3',
+        name:'Jane Doe',
+        age:13,
+        grade:'3A'
+      },
+    ]
+  },
+  g3:{
+    name:'G3 Frontend Bootcamp',
+    students:[
+      {
+        _id:'1',
+        name:'John Doe',
+        age:12,
+        grade:'1A'
+      },
+      {
+        _id:'2',
+        name: 'Michel Doe',
+        age:19,
+        grade:'2A'
+      },
+      {
+        _id:'3',
+        name:'Jane Doe',
+        age:21,
+        grade:'3A'
+      },
+    ]
+  }
+}
+
+const renderGroupData = (group,groupname) => {
+  // console.log(`${groupname.name}\n`)
+
+         group.forEach((item,index,arr) => {
+      console.log(`${index+1}.${item.name} ${item.age} ${item.grade}`)
+    })
+}
+// renderGroupData(schoolDB.g1.students,schoolDB.g1)
+
+const updateGroupName = (groupName,newName) =>{
+    if(groupName.name !== newName){
+        groupName = newName
+    }
+    console.log(groupName)
+}
+// updateGroupName(schoolDB.g1,'G1 Frontend React.js Bootcamp')
+
+const newUsers={
+  _id:'10',
+  name:'Shokhzoda',
+  age:35,
+  grade:'5A'
+}
 
