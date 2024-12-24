@@ -202,3 +202,13 @@ const newUsers={
   grade:'5A'
 }
 
+const addGroupUser = (data) => {
+  const addData = {
+   _id:String(schoolDB.g2.students.length+1),
+   ...data
+  }
+  schoolDB.g2.students.push(addData)
+}
+
+// addGroupUser(newUsers)
+// renderGroupData(schoolDB.g2.students) 
