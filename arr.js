@@ -290,4 +290,22 @@ const renderSchoolboysDB=(data)=>{
         console.log(`${index+1}. ${item.name}, ${item.age} ${item.grade}`)
       })
 }
-renderSchoolboysDB(schoolboysDB.g1.students)
+// renderSchoolboysDB(schoolboysDB.g1.students)
+
+const dataBase = {
+  _id:'10',
+        name:'Shokhzoda Panjizoda',
+        age:35,
+        grade:'5A'
+}
+const addSchoolboysDB=(data,newdata)=>{
+   data.forEach((item,index) => {
+        if(item!==newdata)
+        {}
+      })
+      console.log(data.push(newdata))
+// renderSchoolboysDB(schoolboysDB.g1.students)
+}
+// addSchoolboysDB(schoolboysDB.g1.students,dataBase)
+// renderSchoolboysDB(schoolboysDB.g1.students)
+
