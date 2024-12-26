@@ -309,3 +309,16 @@ const addSchoolboysDB=(data,newdata)=>{
 // addSchoolboysDB(schoolboysDB.g1.students,dataBase)
 // renderSchoolboysDB(schoolboysDB.g1.students)
 
+const updateData=(data,newdata)=>{
+  const student= schoolboysDB.g2.students
+     const newlist = student.findIndex(student => student._id === data
+      )
+      if(newlist=== -1){
+        console.log('User not found')
+      }
+      student[newlist]={...student[newlist],...newdata}
+    //  employees[index]={...employees[index],...body};
+
+}
+// updateData('2',dataBase)
+// renderSchoolboysDB(schoolboysDB.g2.students)
