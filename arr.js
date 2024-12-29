@@ -330,4 +330,16 @@ const renderGroupDatas = (group) => {
       console.log(`School has no ${group} group`)
   }
 }
-renderGroupDatas('g2')
+// renderGroupDatas('g2')
+
+const renderGRDB=(group)=>{
+  if(group in schoolDB){
+schoolDB[group].students.forEach((student,index,arr)=>{
+  console.log(`Name: ${student.name} , Age: ${student.age}, Grade: ${student.grade}`)
+})
+console.log('-------------------------------------')
+  } else{
+    console.log(`School has no ${group} group`)
+  }
+}
+renderGRDB('g5')
