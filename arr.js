@@ -320,26 +320,91 @@ const updateData = (data, newdata) => {
 // renderSchoolboysDB(schoolboysDB.g2.students)
 
 const renderGroupDatas = (group) => {
-  if(group in schoolDB) {
-      console.log(`----- ${schoolDB[group].name} -----`)
-      schoolDB[group].students.forEach((student, index, array) => {
-          console.log(`Name: ${student.name}, Age: ${student.age}, Grade: ${student.grade}`)
-      })
-      console.log('------------------------------------')
+  if (group in schoolDB) {
+    console.log(`----- ${schoolDB[group].name} -----`);
+    schoolDB[group].students.forEach((student, index, array) => {
+      console.log(
+        `Name: ${student.name}, Age: ${student.age}, Grade: ${student.grade}`
+      );
+    });
+    console.log("------------------------------------");
   } else {
-      console.log(`School has no ${group} group`)
+    console.log(`School has no ${group} group`);
   }
-}
+};
 // renderGroupDatas('g2')
 
-const renderGRDB=(group)=>{
-  if(group in schoolDB){
-schoolDB[group].students.forEach((student,index,arr)=>{
-  console.log(`Name: ${student.name} , Age: ${student.age}, Grade: ${student.grade}`)
-})
-console.log('-------------------------------------')
-  } else{
-    console.log(`School has no ${group} group`)
+const renderGRDB = (group) => {
+  if (group in schoolDB) {
+    schoolDB[group].students.forEach((student, index, arr) => {
+      console.log(
+        `Name: ${student.name} , Age: ${student.age}, Grade: ${student.grade}`
+      );
+    });
+    console.log("-------------------------------------");
+  } else {
+    console.log(`School has no ${group} group`);
   }
-}
-renderGRDB('g5')
+};
+// renderGRDB('g5')
+
+const moveStudents = (studentId, group) => {
+  if (group in schoolDB) {
+    const studentIndex = schoolDB[group].students.findIndex(
+      (student) => student._id === studentId
+    );
+
+    if (studentIndex === -1) {
+      for (let key in schoolDB) {
+        const index = schoolDB[key].students.findIndex(
+          (student) => student._id === studentId
+        ); // {}
+        const student = schoolDB[key].students.splice(index, 1)[0];
+
+        if (student) {
+          schoolDB[group].students.push(student);
+        }
+      }
+    } else {
+      console.log(
+        `Student with this ${studentId} is already exists in ${group} group`
+      );
+    }
+  } else {
+    console.log(`School has no ${group} group`);
+    return;
+  }
+};
+// moveStudents('1','g2')
+// renderGroupDatas('g2')
+
+const moveStudent = (studentID, group) => {
+  if (group in schoolDB) {
+    const studentIndex = schoolDB[group].students.findIndex(
+      (student) => student._id === studentID
+    );
+
+    if (studentIndex === -1) {
+      for (let key in schoolDB) {
+        const index = schoolDB[key].students.findIndex(
+          (student) => student._id === studentID
+        );
+        const student = schoolDB[key].students.splice(index, 1)[0];
+
+        if (student) {
+          schoolDB[group].students.push(student);
+        }
+      }
+    } else {
+      console.log(
+        `Student with this ${studentID} is already exists in ${group} group`
+      );
+    }
+  } else {
+    console.log(`School no  ${group} group`);
+    return;
+  }
+};
+
+moveStudent("1", "g2");
+renderGroupDatas("g2");
