@@ -406,5 +406,74 @@ const moveStudent = (studentID, group) => {
   }
 };
 
-moveStudent("1", "g2");
-renderGroupDatas("g2");
+// moveStudent("1", "g2");
+// renderGroupDatas("g2");
+
+
+const BASE_API_URL = 'https://jsonplaceholder.typicode.com';
+
+// GET
+
+const fetchUsers = async () => {
+  const response = await fetch(`${BASE_API_URL}/users`, {
+    method:'GET'
+  })
+  const users = await response.json()
+  return users;
+}
+
+// fetchUsers();
+
+const fetchSingleUser = async (userId) => {
+      const response = await fetch(`${BASE_API_URL}/users/${userId}`,{
+        method:'GET'
+      })    
+
+      const user = await response.json()
+
+      return user
+}
+// fetchSingleUser()
+
+const renderUsers = async () =>{
+    const users = await fetchUsers()
+
+    users?.forEach((user,index)=>{
+      console.log(`${index+1}. ${user?.name} \n ${user?.email}\n  Address: ${user?.address?.street}\n`)
+    })
+}
+// renderUsers()
+
+
+const renderSingleUser = async ()=> {
+  const user = await fetchSingleUser('1')
+
+  console.log(`${user?.name} \n ${user?.email}\n   Address: ${user?.address?.street}`)
+}
+// renderSingleUser()
+
+const deleteSingleUserId = async (userId) => {
+  await fetch(`${BASE_API_URL}/users/${userId}`,
+    {
+      method:'DELETE'
+    })
+}
+// deleteSingleUserId('1')
+// renderUsers()
+
+// PUT
+
+const updateSingleUser = async (userId,body) => {
+    const response = await fetch(`${BASE_API_URL}/users/${userId}`,{
+      method:'PUT',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+
+    const data = await response.json()
+
+    return data
+}
+updateSingleUser()
