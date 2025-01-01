@@ -476,4 +476,18 @@ const updateSingleUser = async (userId,body) => {
 
     return data
 }
-updateSingleUser()
+// updateSingleUser()
+
+const yangilash =async (userId,body) => {
+     const response = await fetch(`${BASE_API_URL}/users/${userId} `, {
+      method:'PUT',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(body)
+      
+     })
+
+     const data = await response.json()
+}
+yangilash()
