@@ -478,7 +478,7 @@ const updateSingleUser = async (userId,body) => {
 }
 // updateSingleUser()
 
-const yangilash =async (userId,body) => {
+const yangilashs =async (userId,body) => {
      const response = await fetch(`${BASE_API_URL}/users/${userId} `, {
       method:'PUT',
       headers:{
@@ -490,4 +490,4 @@ const yangilash =async (userId,body) => {
 
      const data = await response.json()
 }
-yangilash()
+yangilashs()
