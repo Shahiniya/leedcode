@@ -478,7 +478,7 @@ const updateSingleUser = async (userId,body) => {
 }
 // updateSingleUser()
 
-const yangi =async (userId,body) => {
+const yangil =async (userId,body) => {
      const response = await fetch(`${BASE_API_URL}/users/${userId} `, {
       method:'PUT',
       headers:{
@@ -490,4 +490,4 @@ const yangi =async (userId,body) => {
 
      const data = await response.json()
 }
-yangi()
+yangil()
