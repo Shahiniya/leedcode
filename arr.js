@@ -409,110 +409,137 @@ const moveStudent = (studentID, group) => {
 // moveStudent("1", "g2");
 // renderGroupDatas("g2");
 
-
-const BASE_API_URL = 'https://jsonplaceholder.typicode.com';
+const BASE_API_URL = "https://jsonplaceholder.typicode.com";
 
 // GET
 
 const fetchUsers = async () => {
   const response = await fetch(`${BASE_API_URL}/users`, {
-    method:'GET'
-  })
-  const users = await response.json()
+    method: "GET",
+  });
+  const users = await response.json();
   return users;
-}
+};
 
 // fetchUsers();
 
 const fetchSingleUser = async (userId) => {
-      const response = await fetch(`${BASE_API_URL}/users/${userId}`,{
-        method:'GET'
-      })    
+  const response = await fetch(`${BASE_API_URL}/users/${userId}`, {
+    method: "GET",
+  });
 
-      const user = await response.json()
+  const user = await response.json();
 
-      return user
-}
+  return user;
+};
 // fetchSingleUser()
 
-const renderUsers = async () =>{
-    const users = await fetchUsers()
+const renderUsers = async () => {
+  const users = await fetchUsers();
 
-    users?.forEach((user,index)=>{
-      console.log(`${index+1}. ${user?.name} \n ${user?.email}\n  Address: ${user?.address?.street}\n`)
-    })
-}
+  users?.forEach((user, index) => {
+    console.log(
+      `${index + 1}. ${user?.name} \n ${user?.email}\n  Address: ${
+        user?.address?.street
+      }\n`
+    );
+  });
+};
 // renderUsers()
 
+const renderSingleUser = async () => {
+  const user = await fetchSingleUser("1");
 
-const renderSingleUser = async ()=> {
-  const user = await fetchSingleUser('1')
-
-  console.log(`${user?.name} \n ${user?.email}\n   Address: ${user?.address?.street}`)
-}
+  console.log(
+    `${user?.name} \n ${user?.email}\n   Address: ${user?.address?.street}`
+  );
+};
 // renderSingleUser()
 
 const deleteSingleUserId = async (userId) => {
-  await fetch(`${BASE_API_URL}/users/${userId}`,
-    {
-      method:'DELETE'
-    })
-}
+  await fetch(`${BASE_API_URL}/users/${userId}`, {
+    method: "DELETE",
+  });
+};
 // deleteSingleUserId('1')
 // renderUsers()
 
 // PUT
 
 const data = {
-  
-  "name": "Shokhzoda Panjizoda",
-  "username": "Shelli",
-  "email": "Sincere@april.biz",
-  "address": {
-    "street": "Kulas Light",
-    "suite": "Apt. 556",
-    "city": "Gwenborough",
-    "zipcode": "92998-3874",
-    "geo": {
-      "lat": "-37.3159",
-      "lng": "81.1496"
-    }
+  name: "Shokhzoda Panjizoda",
+  username: "Shelli",
+  email: "Sincere@april.biz",
+  address: {
+    street: "Kulas Light",
+    suite: "Apt. 556",
+    city: "Gwenborough",
+    zipcode: "92998-3874",
+    geo: {
+      lat: "-37.3159",
+      lng: "81.1496",
+    },
   },
-  "phone": "1-770-736-8031 x56442",
-  "website": "hildegard.org",
-  "company": {
-    "name": "Romaguera-Crona",
-    "catchPhrase": "Multi-layered client-server neural-net",
-    "bs": "harness real-time e-markets"
-  }
-}
+  phone: "1-770-736-8031 x56442",
+  website: "hildegard.org",
+  company: {
+    name: "Romaguera-Crona",
+    catchPhrase: "Multi-layered client-server neural-net",
+    bs: "harness real-time e-markets",
+  },
+};
 
-const updateSingleUser = async (userId,body) => {
-    const response = await fetch(`${BASE_API_URL}/users/${userId}`,{
-      method:'PUT',
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body: JSON.stringify(body)
-    })
+const updateSingleUser = async (userId, body) => {
+  const response = await fetch(`${BASE_API_URL}/users/${userId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
 
-    const data = await response.json()
+  const data = await response.json();
 
-    return data
-}
-updateSingleUser(3,data)
+  return data;
+};
+// updateSingleUser(3, data);
 // POST
-const addUsers = async(body)  => {
-    const response = await fetch(`${BASE_API_URL}/users`, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-    })
+const addUsers = async (body) => {
+  const response = await fetch(`${BASE_API_URL}/users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
 
-    const data = await response.json();
-    
-    return data;
-}
-addUsers()
+  const data = await response.json();
+
+  return data;
+};
+// addUsers()
+
+const wrapper = document.getElementById("wrapper");
+
+const renderUser = async () => {
+  const users = await fetchUsers();
+
+  if (users?.length > 0) {
+    wrapper.innerHTML = " ";
+
+    users?.forEach((user) => {
+      const card = `
+        <div class='card'>
+        <h4>${user?.name}</h4>
+        <h5>@${user?.username}</h5>
+        <h5>${user?.mail}</h5>
+       </div>
+        `;
+      wrapper.innerHTML += card;
+    });
+  } else {
+    wrapper.innerHTML = "<p>No users found</p>";
+  }
+};
+
+renderUser();
