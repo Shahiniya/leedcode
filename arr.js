@@ -521,7 +521,7 @@ const addUsers = async (body) => {
 
 const wrapper = document.getElementById("wrapper");
 
-const renderU = async () => {
+const renderUser = async () => {
   const users = await fetchUsers();
 
   if (users?.length > 0) {
@@ -542,4 +542,4 @@ const renderU = async () => {
   }
 };
 
-renderU();
+renderUser();
