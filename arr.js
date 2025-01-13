@@ -409,16 +409,17 @@ const moveStudent = (studentID, group) => {
 // moveStudent("1", "g2");
 // renderGroupDatas("g2");
 
-const BASE_API_URL = "https://jsonplaceholder.typicode.com";
+// const BASE_API_URL = "https://jsonplaceholder.typicode.com";
+const BASE_API_URL = "https://dummyjson.com";
 
 // GET
 
 const fetchUsers = async () => {
-  const response = await fetch(`${BASE_API_URL}/users`, {
+  const response = await fetch(`${BASE_API_URL}/products`, {
     method: "GET",
   });
   const users = await response.json();
-  return users;
+  return users?.products;
 };
 
 // fetchUsers();
@@ -542,4 +543,38 @@ const renderUser = async () => {
   }
 };
 
-renderUser();
+// renderUser();
+
+const renderProducts = async () => {
+  const products = await fetchUsers();
+  
+  if (products?.length > 0) {
+  wrapper.innerHTML=''
+
+    products?.forEach((product) => {
+      const card = `
+      <div class='card'>
+      <img src=${product?.thumbnail} alt=${
+      product?.title} />
+      <h4>${product?.title}</h4>
+      <h5>${product?.description}</h5>
+      <h5>${product?.category}</h5>
+      <h5>$${product?.price}</h5>
+      <div class = 'actions-btn'>
+      <button>View</button>
+      <button>Edit</button>
+      <button>Delete</button>
+      </div>
+      </div>
+      `
+    wrapper.innerHTML += card
+
+    });
+  }
+  else{
+    wrapper.innerHTML = '<P>Not found</P>'
+    return
+  }
+};
+
+renderProducts()
