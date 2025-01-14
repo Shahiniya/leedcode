@@ -545,7 +545,7 @@ const renderUser = async () => {
 
 // renderUser();
 
-const renderProducts = async () => {
+const renderProduct = async () => {
   const products = await fetchUsers();
   
   if (products?.length > 0) {
@@ -561,9 +561,9 @@ const renderProducts = async () => {
       <h5>${product?.category}</h5>
       <h5>$${product?.price}</h5>
       <div class = 'actions-btn'>
-      <button>View</button>
-      <button>Edit</button>
-      <button>Delete</button>
+      <button class='sss'>View</button>
+      <button class='sss'>Edit</button>
+      <button class='sss'>Delete</button>
       </div>
       </div>
       `
@@ -577,4 +577,4 @@ const renderProducts = async () => {
   }
 };
 
-renderProducts()
+renderProduct()

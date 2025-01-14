@@ -45,5 +45,11 @@ h2{  text-align:center;
   display: flex;
   justify-content: flex-end;
   gap:20px;
-  color:brown;
+}
+
+.sss{
+  background-color: rgb(93, 233, 244);
+  border-radius: 5px;
+color:rgb(203, 11, 184);
+font-size: 15px;
 }
