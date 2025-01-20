@@ -545,7 +545,7 @@ const renderUser = async () => {
 
 // renderUser();
 
-const renderProductsd = async () => {
+const renderProducts = async () => {
   const products = await fetchUsers();
   
   if (products?.length > 0) {
@@ -577,4 +577,4 @@ const renderProductsd = async () => {
   }
 };
 
-renderProductsd()
+renderProducts()
