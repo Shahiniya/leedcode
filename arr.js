@@ -545,36 +545,87 @@ const renderUser = async () => {
 
 // renderUser();
 
-const renderProducts = async () => {
-  const products = await fetchUsers();
-  
+// const renderProducts = async () => {
+//   const products = await fetchUsers();
+
+//   if (products?.length > 0) {
+//   wrapper.innerHTML=''
+
+//     products?.forEach((product) => {
+//       const card = `
+//       <div class='card'>
+//       <img src=${product?.thumbnail} alt=${
+//       product?.title} />
+//       <h4>${product?.title}</h4>
+//       <h5>${product?.description}</h5>
+//       <h5>${product?.category}</h5>
+//       <h5>$${product?.price}</h5>
+//       <div class = 'actions-btn'>
+//       <button class='sss'>View</button>
+//       <button class='sss'>Edit</button>
+//       <button class='sss'>Delete</button>
+//       </div>
+//       </div>
+//       `
+//     wrapper.innerHTML += card
+
+//     });
+//   }
+//   else{
+//     wrapper.innerHTML = '<P>Not found</P>'
+//     return
+//   }
+// };
+
+// renderProducts()
+
+const searchInput = document.getElementById("searchInput");
+
+const fetchProducts = async (searchText) => {
+  const url = searchText ? `${BASE_API_URL}/products/search?q=${searchText}` : `${BASE_API_URL}/products`
+
+  const response = await fetch(url, {
+    method: "GET",
+  });
+  const data = await response.json(); // json -> parses json format (string format) to plain javascript
+
+  return data?.products;
+};
+
+const renderProducts = async (searchText) => {
+  const products = await fetchProducts(searchText);
+
   if (products?.length > 0) {
-  wrapper.innerHTML=''
+    wrapper.innerHTML = "";
 
     products?.forEach((product) => {
       const card = `
-      <div class='card'>
-      <img src=${product?.thumbnail} alt=${
-      product?.title} />
-      <h4>${product?.title}</h4>
-      <h5>${product?.description}</h5>
-      <h5>${product?.category}</h5>
-      <h5>$${product?.price}</h5>
-      <div class = 'actions-btn'>
-      <button class='sss'>View</button>
-      <button class='sss'>Edit</button>
-      <button class='sss'>Delete</button>
-      </div>
-      </div>
-      `
-    wrapper.innerHTML += card
+                <div class="card">
+                  <img src=${product?.thumbnail} alt="${product?.title}" />
+                  <h4>${product?.title}</h4>
+                  <h5>@${product?.description}</h5>
+                  <h5>${product?.category}</h5>
+                  <h5>$${product?.price}</h5>
+                  <div class='action-btns'>
+                    <button>View</button>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                  </div>
+                </div>
+            `;
 
+      wrapper.innerHTML += card;
     });
-  }
-  else{
-    wrapper.innerHTML = '<P>Not found</P>'
-    return
+  } else {
+    wrapper.innerHTML = "<p>No users found</p>";
+    return;
   }
 };
 
-renderProducts()
+searchInput.addEventListener('keydown', (event) => {
+  if(event.key === 'Enter' && event.code === 'Enter' && event.keyCode === 13) {
+    renderProducts(event.target.value.trim())
+  }
+})
+
+renderProducts();
