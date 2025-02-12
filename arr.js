@@ -592,7 +592,7 @@ const fetchProducts = async (searchText) => {
   return data?.products;
 };
 
-const renderProductsaa = async (searchText) => {
+const renderProductsnn = async (searchText) => {
   const products = await fetchProducts(searchText);
 
   if (products?.length > 0) {
@@ -628,4 +628,4 @@ searchInput.addEventListener('keydown', (event) => {
   }
 })
 
-renderProducts();
+renderProductsnn();
