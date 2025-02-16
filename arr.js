@@ -592,7 +592,7 @@ const fetchProducts = async (searchText) => {
   return data?.products;
 };
 
-const renderProducts = async (searchText) => {
+const renderProduct = async (searchText) => {
   const products = await fetchProducts(searchText);
 
   if (products?.length > 0) {
@@ -624,8 +624,8 @@ const renderProducts = async (searchText) => {
 
 searchInput.addEventListener('keydown', (event) => {
   if(event.key === 'Enter' && event.code === 'Enter' && event.keyCode === 13) {
-    renderProducts(event.target.value.trim())
+    renderProduct(event.target.value.trim())
   }
 })
 
-renderProducts();
+renderProduct();
